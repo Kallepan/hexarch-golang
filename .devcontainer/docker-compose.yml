@@ -27,8 +27,9 @@ services:
   db:
     image: postgres:latest
     restart: unless-stopped
+    # startup sql files
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - ../testdb:/docker-entrypoint-initdb.d
     env_file:
       # Ensure that the variables in .env match the same variables in devcontainer.json
       - .env
