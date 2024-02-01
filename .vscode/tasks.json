@@ -24,6 +24,12 @@
             "type": "shell",
             "command": "wire gen ./...",
             "problemMatcher": []
+        },
+        {
+            "label": "go test",
+            "type": "shell",
+            "command": "go test -v ./...",
+            "problemMatcher": []
         }
     ]
 }
